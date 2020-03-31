@@ -21,8 +21,8 @@ public class CustomerImp extends Customer {
 	@ManyToOne
 	private Agency agency;
 
-	@ManyToMany
-	private Collection<ServiceItem> ServiceItems;
+	@ManyToMany//(mappedBy = "customers")
+	private Collection<ServiceItem> serviceItems;
 
 	/************************ Getters and Setters ****************/
 
@@ -35,7 +35,7 @@ public class CustomerImp extends Customer {
 	}
 
 	public Collection<ServiceItem> getServiceItems() {
-		return ServiceItems;
+		return serviceItems;
 	}
 
 	/************************ Constructors ****************/
@@ -49,7 +49,7 @@ public class CustomerImp extends Customer {
 
 	public CustomerImp(String customerName, ServiceItem... serviceItems) {
 		super(customerName);
-		this.ServiceItems = new HashSet<>(Arrays.asList(serviceItems));
+		this.serviceItems = new HashSet<>(Arrays.asList(serviceItems));
 	}
 
 }

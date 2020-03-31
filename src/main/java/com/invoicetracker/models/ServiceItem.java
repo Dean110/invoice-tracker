@@ -23,7 +23,7 @@ public class ServiceItem {
 	@ManyToOne
 	private InvoiceImp invoice;
 
-	@ManyToMany
+	@ManyToMany//(mappedBy = "serviceItems")
 	private Collection<CustomerImp> customers;
 
 	private LocalDate dateOfService;
