@@ -22,6 +22,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.invoicetracker.Repositories.AgencyRespository;
 import com.invoicetracker.Repositories.ContractorRepository;
+import com.invoicetracker.Repositories.CustomerImpRespository;
+import com.invoicetracker.Repositories.InvoiceImpRespository;
+import com.invoicetracker.Repositories.ServiceItemRespository;
 import com.invoicetracker.models.Agency;
 import com.invoicetracker.models.Contractor;
 import com.invoicetracker.models.CustomerImp;

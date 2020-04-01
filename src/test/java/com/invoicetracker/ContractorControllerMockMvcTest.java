@@ -2,6 +2,7 @@ package com.invoicetracker;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -29,9 +30,17 @@ public class ContractorControllerMockMvcTest {
 	
 	@Test
 	public void shouldGetStatusOfOkWhenNavigatingToCreateInvoice() throws Exception {
-		this.mockMvc.perform(get("/contractor/create-invoice")).andExpect(status().isOk());
+		this.mockMvc.perform(get("/contractor/create-invoice")).andExpect(status().isOk())
+		.andExpect(view().name("create-invoice"));
+	}
+
+	@Test
+	public void shouldGetStatusOfOkWhenNavigatingToViewInvoice() throws Exception {
+		this.mockMvc.perform(get("/contractor/view-invoice")).andExpect(status().isOk())
+		.andExpect(view().name("view-invoice"));
 	}
 	
 	
+
 
 }

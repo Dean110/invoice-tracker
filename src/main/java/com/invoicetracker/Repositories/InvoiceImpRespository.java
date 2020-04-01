@@ -1,4 +1,4 @@
-package com.invoicetracker;
+package com.invoicetracker.Repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
